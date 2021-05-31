@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Weather</title>
+      <link rel="icon" href="/img/weather.png">
+<link rel='stylesheet' href='/css/style.css'>
+   </head>
+    <body> 
+      <div class="main-content">
+{{>header}} 
+<p>Use this site to get your weather!</p>
+    
+    <form>
+      <input placeholder="Location">
+      <button>
+Search
+      </button>
+    </form>
+    <p id="message-1">
+
+    </p>
+<p id="message-2">
+
+</p>
+      </div>
+     
+    {{>footer}}
+<script src='/js/app.js'> </script>
+ 
+    </body>
+</html>
+
+
+<!--link is empty tag
+relative path version =>href='./css/style.css'
+above path is absolute,here path is set to public folder 
+  <h1>Welcome to static html file</h1>
+-->
+
