@@ -2,7 +2,7 @@ const express=require('express')
 const app=express()
 const geocode=require('./utils/geocode')
 const forecast=require('./utils/forecast')
-
+const port=process.env.PORT||3000
 const hbs=require('hbs')
 //to set the path for html static file
 const path=require('path')
@@ -30,7 +30,7 @@ app.use(express.static(publicDirectoryPath))
 //need to setup up the route
 app.get('',(req,res)=>{
 res.render('index',{
-    title:'AAJ KA MAUSAM',
+    title:'Live-Weather ',
     name:'Gasilo'
 })
 //first is name of the view to render
@@ -146,6 +146,6 @@ app.get('*',(req,res)=>{
 })
 
 //to start the server which is an asynchronous process
-app.listen(3000,()=>{
-    console.log('Server is upto start on port 3000.')
+app.listen(port,()=>{
+    console.log('Server is upto start on port '+port)
 })
